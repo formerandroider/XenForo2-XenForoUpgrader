@@ -1,0 +1,52 @@
+<xf:title>{{ phrase('liamw_xenforoupgrade_upgrade_x', {'product':{$productName}}) }} - {{
+    phrase('liamw_xenforoupgrade_version') }}
+</xf:title>
+
+<xf:form action="{{ link('tools/upgrade/upgrade') }}" method="post" class="block">
+
+    <div class="block-container">
+        <div class="block-body">
+
+            <xf:selectrow label="{{ phrase('liamw_xenforoupgrade_version') }}" name="version_id" value="{$selectedVersion}">
+                <xf:option value="">({{ phrase('liamw_xenforoupgrade_select_version') }})</xf:option>
+                <xf:options source="{$versions}"/>
+            </xf:selectrow>
+
+            <xf:checkboxrow label="">
+                <xf:option name="ftp_upload" label="{{ phrase('liamw_xenforoupgrade_ftp_upload') }}"
+                           explain="{{ phrase('liamw_xenforoupgrade_ftp_upload_explain') }}">
+                    <xf:dependent>
+                        <div class="inputGroup inputGroup--auto inputGroup--inline">
+                            <span class="inputGroup-text">{{ phrase('liamw_xenforoupgrade_host:') }}</span>
+                            <xf:textbox placeholder="127.0.0.1" name="host" size="25"/>
+                            <span class="inputGroup-text">:</span>
+                            <xf:textbox name="port" size="2" placeholder="21"/>
+                        </div>
+
+                        <div class="inputGroup inputGroup--auto inputGroup--inline">
+                            <span class="inputGroup-text">{{ phrase('liamw_xenforoupgrade_ftp_username:') }}</span>
+                            <xf:textbox name="user"/>
+                            <span class="inputGroup-text">{{ phrase('liamw_xenforoupgrade_ftp_password:') }}</span>
+                            <xf:textbox name="password" type="password"/>
+                        </div>
+
+                        <xf:checkbox label="">
+                            <xf:option name="ssl" label="{{ phrase('liamw_xenforoupgrade_ssl') }}"/>
+                        </xf:checkbox>
+
+                        <div>{{ phrase('liamw_xenforoupgrade_xenforo_path:') }}</div>
+                        <xf:textbox label="{{ phrase('liamw_xenforoupgrade_xenforo_path') }}" name="xf_path"
+                                    placeholder="public_html"
+                                    explain="{{ phrase('liamw_xenforoupgrade_xenforo_path_explain') }}"
+                                    class="input--autoSize"/>
+                    </xf:dependent>
+                </xf:option>
+            </xf:checkboxrow>
+
+            <xf:submitrow submit="{{ phrase('liamw_xenforoupgrade_upgrade_x', {'product':{$productName}}) }}"/>
+
+            <xf:hiddenval name="license_id" value="{$licenseId}"/>
+            <xf:hiddenval name="product_id" value="{$productId}"/>
+        </div>
+    </div>
+</xf:form>

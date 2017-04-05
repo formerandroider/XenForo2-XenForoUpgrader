@@ -1,0 +1,27 @@
+{
+    "admin/liamw_xenforoupgrade_credentials.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "b8c6582fe722cbd220f408694aa9992d"
+    },
+    "admin/liamw_xenforoupgrade_index.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9e84bc206f289b6b8dcc1fdd95de10d1"
+    },
+    "admin/liamw_xenforoupgrade_license.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "0cae86202977691c093d9a5146357705"
+    },
+    "admin/liamw_xenforoupgrade_product.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "015cb4850634893f1108ee743e8702b0"
+    },
+    "admin/liamw_xenforoupgrade_version.html": {
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "160fd02e0b4c16a0e1be44eb31f2d2a0"
+    }
+}

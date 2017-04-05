@@ -1,0 +1,21 @@
+<xf:title>{{ phrase('liamw_xenforoupgrade_upgrade_xenforo:') }} {{ phrase('liamw_xenforoupgrade_license') }}</xf:title>
+
+<xf:form action="{{ link('tools/upgrade/product') }}" method="post" class="block">
+
+    <div class="block-container">
+        <div class="block-body">
+
+            <xf:selectrow label="{{ phrase('liamw_xenforoupgrade_license') }}" name="license_id">
+                <xf:option value="">({{ phrase('liam_xenforoupgrade_select_license') }})</xf:option>
+                <xf:foreach loop="$licenses" key="$licenseId" value="$license">
+                    <xf:option value="{$licenseId}"
+                               selected="{$license.selected}">{$license.title}
+                    </xf:option>
+                </xf:foreach>
+            </xf:selectrow>
+
+            <xf:submitrow submit="{{ phrase('continue') }}"/>
+        </div>
+    </div>
+
+</xf:form>

@@ -1,0 +1,10 @@
+{
+    "title": "XenForo Upgrader",
+    "version_string": "1.0.0 Alpha 1",
+    "version_id": 1000011,
+    "require": {
+        "php-ext/zip": [
+            "*", "php-ext/zip"
+        ]
+    }
+}

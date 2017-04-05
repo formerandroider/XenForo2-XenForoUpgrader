@@ -1,0 +1,16 @@
+<xf:title>{{ phrase('liamw_xenforoupgrade_upgrade_xenforo') }}</xf:title>
+
+<xf:form action="{{ link('tools/upgrade/credentials') }}" method="post" class="block">
+
+    <div class="block-container">
+        <div class="block-body">
+            <xf:inforow>
+                {{ phrase('liamw_xenforoupgrade_upgrade_warning') }}
+            </xf:inforow>
+            <xf:submitrow submit="{{ phrase('continue') }}"/>
+        </div>
+    </div>
+
+    <xf:hiddenval name="confirmed" value="1"/>
+
+</xf:form>

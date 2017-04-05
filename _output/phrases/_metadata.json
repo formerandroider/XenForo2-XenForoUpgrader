@@ -1,0 +1,146 @@
+{
+    "admin_navigation.liamw_xenforoUpgrade.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "76aa7f4dd579e54c3e6c54ac582c8e60"
+    },
+    "liam_xenforoupdater_invalid_product.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "cc0e7e4bc2a1818913814387e7a42aa6"
+    },
+    "liam_xenforoupgrade_select_license.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "e2391d860c6c401f83ef368843111b6f"
+    },
+    "liam_xenforoupgrade_select_product.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "d401ff02b78a8ecc9b835168f697b6e7"
+    },
+    "liamw_xenforoupgrade_credentials.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "2daf1cb573c2c61422faf64610cf9402"
+    },
+    "liamw_xenforoupgrade_ftp_password.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "f776d3d880c98f9b75306bee39dda62d"
+    },
+    "liamw_xenforoupgrade_ftp_upload.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "3b83469c2a07565294c8a0a14d9c3950"
+    },
+    "liamw_xenforoupgrade_ftp_username.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "1dfcbc57d26b470f2fc928894d5dd437"
+    },
+    "liamw_xenforoupgrade_host.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "9cde8914ff9a2cb56030355c3c16b560"
+    },
+    "liamw_xenforoupgrade_license.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "794df3791a8c800841516007427a2aa3"
+    },
+    "liamw_xenforoupgrade_product.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "deb10517653c255364175796ace3553f"
+    },
+    "liamw_xenforoupgrade_select_version.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c507c2522d97420a899de7d8b26f894c"
+    },
+    "liamw_xenforoupgrade_ssl.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "ad6a80b9449bcfcf502b179b81117219"
+    },
+    "liamw_xenforoupgrade_update_xenforo.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "61dee16cadcca313edc9ba0915230970"
+    },
+    "liamw_xenforoupgrade_update_xfes.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "290efc966016bac8068c7e37cec37e1c"
+    },
+    "liamw_xenforoupgrade_update_xfmg.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "698932ea5a78b9268b77e961faa636db"
+    },
+    "liamw_xenforoupgrade_update_xfresource.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "5c756bd37595bf1ad13316e73684689a"
+    },
+    "liamw_xenforoupgrade_upgrade_warning.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "99b2f6f54d0b05f39a601efe6871deb8"
+    },
+    "liamw_xenforoupgrade_upgrade_x.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "4c21240ae2cdb44de46b2669132ac0f8"
+    },
+    "liamw_xenforoupgrade_upgrade_xenforo.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "ba104dbdb88d0efe3bc72562379a00a9"
+    },
+    "liamw_xenforoupgrade_version.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "34b6cd75171affba6957e308dcbd92be"
+    },
+    "liamw_xenforoupgrade_xenforo_customer_email.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "c9992dfce827f4dc55ea6bfb909ec7fa"
+    },
+    "liamw_xenforoupgrade_xenforo_customer_password.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "13a58217ac7a4be31040220e21ec2fd5"
+    },
+    "liamw_xenforoupgrade_xenforo_path.txt": {
+        "global_cache": false,
+        "version_id": 1000011,
+        "version_string": "1.0.0 Alpha 1",
+        "hash": "7181f0d3531177cacff69d65c86297a4"
+    }
+}

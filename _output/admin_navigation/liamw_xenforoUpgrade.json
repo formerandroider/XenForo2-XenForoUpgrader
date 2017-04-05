@@ -1,0 +1,9 @@
+{
+    "parent_navigation_id": "tools",
+    "display_order": 1,
+    "link": "tools/upgrade",
+    "icon": "download",
+    "admin_permission_id": "",
+    "debug_only": false,
+    "hide_no_children": false
+}

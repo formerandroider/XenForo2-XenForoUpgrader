@@ -1,0 +1,1 @@
+This will upgrade your XenForo installation. You agree that your server will connect to the XenForo server and download the requested XenForo zip.
