@@ -13,16 +13,6 @@ class Listener
 
 	public static function addAutoloadStuff()
 	{
-		$autoloadMethods = spl_autoload_functions();
-
-		if (isset($autoloadMethods[0]) && is_array($autoloadMethods[0]))
-		{
-			$classLoaderObj = $autoloadMethods[0][0];
-
-			if ($classLoaderObj instanceof ClassLoader)
-			{
-				$classLoaderObj->add('FtpClient', 'src/addons/LiamW/XenForoUpgrade/lib/FtpClient/src');
-			}
-		}
+		\XF::$autoLoader->add('FtpClient', 'src/addons/LiamW/XenForoUpgrade/lib/FtpClient/src');
 	}
 }
