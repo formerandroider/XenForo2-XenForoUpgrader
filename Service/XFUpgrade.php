@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use League\Flysystem\Filesystem;
 use League\Flysystem\ZipArchive\ZipArchiveAdapter as Zip;
+use League\Flysystem\Adapter\Ftp;
 use Symfony\Component\DomCrawler\Crawler;
 use XF\Service\AbstractService;
 use XF\Util\File;
@@ -176,7 +177,16 @@ class XFUpgrade extends AbstractService
 	 */
 	public function setFtpData($ftpData)
 	{
-		$this->ftpData = $ftpData;
+		$data = [
+			'host' => $ftpData['host'] ?: '127.0.0.1',
+			'port' => $ftpData['port'] ?: 21,
+			'username' => $ftpData['user'],
+			'password' => $ftpData['password'],
+			'root' => $ftpData['xf_path'],
+			'ssl' => $ftpData['ssl']
+		];
+
+		$this->ftpData = $data;
 
 		if ($ftpData['ftp_upload'])
 		{
@@ -302,6 +312,9 @@ class XFUpgrade extends AbstractService
 
 	public function doUpgrade()
 	{
+		@set_time_limit(0);
+		@ignore_user_abort(true);
+
 		$tmpFile = File::getTempFile();
 
 		$r = $this->getNewGuzzleRequest(self::DOWNLOAD_URL, "POST", [
@@ -314,19 +327,40 @@ class XFUpgrade extends AbstractService
 			'save_to' => $tmpFile
 		]);
 
-		$file = "internal-data://xf-upgrades/" . $this->selectedVersion . '.zip';
-
 		$this->httpClient->send($r);
 
+		$file = "internal-data://xf-upgrades/" . $this->selectedVersion . '.zip';
 		File::copyFileToAbstractedPath($tmpFile, $file);
 
-		$fs = \XF::app()->fs();
+		$zip = new Zip($tmpFile);
+		$zipFs = new Filesystem($zip);
 
-		if ($fs->has($file))
+		$fs = \XF::fs();
+
+		$pathPrefix = "internal-data://xf-upgrades/" . $this->selectedVersion . "/";
+
+		// This works but it unworkably slow, so...
+		// TODO: Improve this!!!!!
+
+		foreach ($zipFs->listContents('upload', true) AS $content)
 		{
-			$zipFs = new Filesystem(new Zip($tmpFile));
-			die;
+			if ($content['type'] == 'dir') {
+				continue;
+			}
+
+			$path = $pathPrefix . substr($content['path'], 7);
+
+			$fs->putStream($path, $zipFs->readStream($content['path']));
 		}
+
+		if ($this->ftpUpload)
+		{
+			$ftp = new Ftp($this->ftpData);
+			$ftpFs = new Filesystem($ftp);
+		}
+
+		$zip->extractTo();
+
 	}
 
 	/**

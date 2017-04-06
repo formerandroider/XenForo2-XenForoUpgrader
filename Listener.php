@@ -2,8 +2,6 @@
 
 namespace LiamW\XenForoUpgrade;
 
-use Composer\Autoload\ClassLoader;
-
 class Listener
 {
 	public static function appSetup(\XF\App $app)
